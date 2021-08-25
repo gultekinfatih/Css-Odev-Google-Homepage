@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*kutunun genişlik ve yükseklik degerinin padding ve border degerlerini de icermesini saglar*/
+}
+
+
+nav {
+  width: 100%;
+  display: flex; /*ögelere esneklik verir*/
+  justify-content:flex-end; /*Öğelerin yatay eksende hizasını ayarlamak için kullanılır/ bitiş noktasında (sağa dayalı) hizalar*/
+}
+.header {
+  list-style-type: none; /* lilerin başındaki işaretleri siler */
+  margin: 10px;
+  overflow: hidden;  /* scroll cubugunu gizler */
+  margin-right: 16px;
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  display: flex;
+  flex-direction:row-reverse ; /*ögelerin yönünü belirler/sagdan sola dogru sıralar*/
+  
+}
+#pic {
+  border-radius: 50%;   /* element kenarlarını yuvarlar */
+  height: 34px;
+}
+.headerli a {
+  display: block; 
+  color: black;
+  text-align: center; /*divin icindeki metni ortalar*/
+  padding: 5px 5px;
+  text-decoration: none; /*yazıların altını çizezr*/
+  list-style-type: none; 
+}
+
+.headerli a:hover {
+  text-decoration: underline;
+}    /* imleç elementin üstüne gelince altını çizer*/
+
+.container {
+  text-align: center;
+  margin: 100px;
+}
+
+.search-area {
+  background: #fff;
+  display: flex;
+  border: 1px solid #dfe1e5;
+  box-shadow: none; /*kutulara gölge uygular */
+  z-index: 3; /*z ekseninde konum belirler*/
+  height: 44px;
+  margin: 0 auto;
+  margin-top: -77px;
+  width: 582px;
+  border-radius:24px;
+}
+
+.search-area:hover {
+box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
+} /*.search kısmında imlec üzerine gelince gölge verir*/
+
+.search {
+  flex: 1;
+  display: flex; 
+  padding: 5px 8px 0 16px;
+  padding-left: 14px;
+}
+
+.search-img {
+  display: flex;
+  align-items: center; /*Öğelerin dikey eksende hizasını ayarlamak için kullanılır/ortaya dogru hizalar*/
+  padding-right: 13px;
+  margin-top: -5px;
+}
+
+.search-img span {
+  color: #9aa0a6;
+  height: 20px;
+  width: 20px;
+  margin-top: 0px;
+  display: inline-block; /* inline block ogenin üzerinde yükseklik ve genişlik ayarlanmasına izin verir*/
+  fill: currentColor; /*mevcut elemanın color rengini referans alıp alt elemanlara uygular*/
+  line-height: 24px;  /*div elemanlarının satırlarının arasındaki yüksekligi belirler*/
+  position: relative;
+}
+#mic {
+  display: flex;
+  height: 24px;
+  margin: 5px;
+  fill: currentColor;
+  line-height: 24px;
+  position: relative; /*ögenin sayfanın dogal akısında kalmasını saglar*/
+  cursor: pointer; /* imlec ilgili elementin üzerinde şekil değiştirir*/
+  
+  }
+.input-enter {
+  display: flex;
+  flex: 1; /*tüm esnek ögelerin aynı uzunlukta olmasına izin verir*/
+  flex-wrap: wrap; /*esnek ogeleri birden fazla satırda soldan saga sıralar*/
+}
+
+.input-area {
+  color: transparent; 
+  flex: 100%; 
+  white-space: pre; /*öğenin içindeki boşlukların görüntüsünü belirler*/
+  font: 16px arial, sans-serif;
+  line-height: 34px; 
+  height: 34px !important;
+  display: block;
+}
+
+.input {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.87);
+  word-wrap: break-word; /* uzun kelimelerin sonraki satıra ayrılmasını saglar */
+  outline: none; /* sınır çizgisinin dışındaki sınır alanı siler*/
+  display: flex;
+  flex: 100%;
+  margin-top: -68px;
+  font: 16px arial, sans-serif;
+  line-height: 34px;
+  height: 34px !important;
+  text-rendering: auto; /*tarayıcının metinleri nasıl tarayacağını belirler*/
+  letter-spacing: normal; /*harfler arasındaki boşluğu belirler*/
+  word-spacing: normal;   /*kelimeler arasındaki boşluğu belirler*/
+  text-transform: none;   /* metnin büyük kücük harf kullanımını belirler /tamamı buyuk harf kucuk harf gibi*/
+  text-indent: 0px;       /*metnin ilk satırına girinti verir*/
+  text-shadow: none;     /*metne gölge verir*/
+  text-align: start;
+  appearance: textfield;  /*işletim sisteminin temasına göre platforma özgü bir stil kullanarak ögeyi görüntüler*/
+  cursor: text;
+  width: 480px;
+  border: none;
+}
+
+.googlesearch {
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  min-width: 54px; /* span ogesinin minimum genişliğini belirler*/
+  text-align: center;
+  cursor: pointer;
+  user-select: none; /*div ögesinin metninin imlecle seçilmesini engeller*/
+}
+
+.buttons {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center; /*Öğelerin yatay eksende hizasını ayarlamak için kullanılır/ögeleri ortada hizalar*/
+  align-items: center;
+  
+}
+.feelinglucky {
+  font-family: Arial,sans-serif;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 36px;
+  margin: 11px 4px;
+  text-decoration: none solid rgb(34, 34, 34);
+  color: #5f6368;
+  padding: 0 16px;
+  line-height: 27px;
+  min-width: 54px; 
+  text-align: center;
+  cursor: pointer; 
+  user-select: none;
+}
+.feelinglucky:hover {
+box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
+}
+.footer {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #dfe1e5;
+  border-top: 1px solid #dadce0;
+  position: fixed;  /*bir elementin konumunu belirler sabit yapışkan gibi */
+  bottom: 0; /* alttan boşluk ayarlar */
+  width: 100%;
+  margin-left: -8px;
+  line-height: 10px;
+  list-style-type: none;
+  background-color: #f2f2f2;
+}
+
+.footerli {
+  float: left;
+}
+
+.footerli a {
+  display: block;
+  color: #70757a;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin-left: 14px;
+  margin-right: -20px;
+}
+
+.footerli a:hover {
+  text-decoration: underline;
+}
+
+/*
+Bu projede kullanılan elementlerin işlevlerinin neredeyse tamamını açıklama satırları ile belirtmeye çalıştım.
+      Buradaki amacım sonraki projelerimde gereken özellikleri ararken bu projeden referans alabilmek ve projenin inceleyen başkalarına da anlaşılabilir gelmesidir.
+ */
